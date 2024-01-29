@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4世代乱数調整補助ツール</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+<section class="hero is-link">
+    <div class="hero-body">
+        <p class="title">
+        4世代乱数調整補助ツール
+        </p>
+    </div>
+</section>
+<div class="box">
+<div class="field">
+<label>月×日＋分＋秒</label>
+<input class="input" id="time" type="number" placeholder="Text input">
+</div>
+<div class="field">
+<label>時</label>
+<input class="input" id="hour" type="number" placeholder="Text input">
+</div>
+<div class="field">
+<label>フレーム＋年-2000</label>
+<input class="input" id="frame" type="number" placeholder="Text input">
+</div>
+<div class="field">
+<label>空白のフレーム（わからない場合は350）</label>
+<input class="input" id="blankframe" type="number" value="350" placeholder="Text input">
+</div>
+<div class="field">
+<label class="checkbox">
+    <input type="checkbox" id="mycheckbox">
+    3DSで実行する
+  </label>
+
+  <label>（ここで秒数をずらして調整して遅延時間を調整してください。初期値5.0）</label>
+  <input class="input" id="gapsecond" type="number" value="5.0">
+  
+</div>
+<button class="button is-primary" id="calculateButton">計算</button>
+</div>
+<div class="box">
+        <p class="title">
+          計算結果
+        </p>
+<div class="field">
+    <label>タイマー入力用</label>
+    <input class="input" id="resultframe" type="text">
+    </div>
+    <div class="field">
+    <input class="input" id="gameselect" type="text">
+    </div>
+    <div class="field">
+    <input class="input" id="continueselect" type="text">
+    </div>
+</div>
+</body>
+
+<script src="calculation.js"></script>
+</html>
